@@ -26,23 +26,27 @@ export const Students = () =>{
  
     return(
         <>
-        <Header/>
-        <div className='h-96 w-full flex items-center justify-center'>
-        <div className='shadow-2xl p-5 w-fit '>
-        {formIsVisible ? <NewStudent/> :
+
+  <Header />
+  <div className='h-[90vh] flex items-center justify-center'>
+    <div className='shadow-2xl p-5 max-w-lg w-full'>
+      {formIsVisible ? (
+        <NewStudent />
+      ) : (
         <div>
-        <SearchInput/>
-            <div>
-            {
-                (dataFilter.length === 0 ) ? <p>Empty</p> : 
-                <ListStudents />
-                
-            }
+          <SearchInput />
+          <div>
+            {dataFilter.length === 0 ? (
+              <p className='text-center mt-4'>Nenhum estudante encontrado.</p>
+            ) : (
+              <ListStudents />
+            )}
+          </div>
         </div>
-            </div>
-        }
-        </div>
-        </div>
-        </>
+      )}
+    </div>
+  </div>
+</>
+
     )
 }

@@ -14,15 +14,16 @@ const Provider = ({children}) => {
     const [message, setMessage]= useState([])
 
     
-    const handleAddStudent = (event)=>{
-        event.preventDefault()
-        if(studentName.length && studentDescription.length !== 0){
+    const handleAddStudent = (data)=>{
+       
+        console.log(data)
+        if(data.name && data.description){
             const newStudent = {
-                linkUrl: studentName,
-                name: studentName,
-                description: studentDescription
+                linkUrl: data.name,
+                name: data.name,
+                description: data.description
             }
-
+            console.log("new ", newStudent)
             const updateData = [...originalData, newStudent]
             setOriginalData(updateData)
             

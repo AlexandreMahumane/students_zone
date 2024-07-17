@@ -14,7 +14,7 @@ export const Contact = () =>{
     return(
         <>
         <Header/>
-        <div className='h-96 w-full flex items-center justify-center'>
+        <div className='h-[90vh] w-full flex items-center justify-center'>
        {(isVisible) ? 
        <div className='shadow-2xl p-5 w-fit '>
             <ContactForm handle={handleSetIsVisible}/>
@@ -24,7 +24,7 @@ export const Contact = () =>{
             <div className='w-full text-end'><button onClick={handleSetIsVisible}>X</button></div>
             <p>Name: <span>{studentName}</span></p>
             
-            <p>Age: <span>{message}</span></p>
+            <p>Message: <span>{message}</span></p>
             
         </div>
          

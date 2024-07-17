@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { AppContext } from "../../context/AppContext"
+import { BsInfoCircle, BsTrash3 } from "react-icons/bs";
 
 const ListStudents = () => {
 
@@ -14,15 +15,15 @@ const ListStudents = () => {
     }
 
     return(
-        <ul className='text-center flex flex-col space-y-3 mt-3'>
+        <ul className='text-center max-h-80 overflow-y-auto p-2 flex flex-col space-y-3 mt-3'>
         {dataFilter.map((e, index) => 
         
             <li key={index} className='flex justify-between p-2 border rounded-lg border-black'>
              <p>{e.name}</p>
-                <div>
-                    <Link  className='' 
-                    to={`/studentInfo/${e.linkUrl}`}>  i </Link>
-                    <button  onClick={()=>handleDeleteStudent(e.name)}>del</button> 
+                <div className="flex space-x-2">
+                    <Link  className='mt-1' 
+                    to={`/studentInfo/${e.linkUrl}`}> <BsInfoCircle/></Link>
+                    <button  onClick={()=>handleDeleteStudent(e.name)}><BsTrash3 /></button> 
                 </div>  
                 </li>
          )}

@@ -8,8 +8,7 @@ import StudentInfo from "./pages/StudentInfo";
 export const routes = createBrowserRouter([
     {
         path: '/',
-        element: <Home/>,
-        errorElement: <ErrorPage/>
+        element: <Home/>
     },
 
     {

@@ -13,7 +13,7 @@ const SearchInput = () =>{
             onChange={handleSearchStudent} 
             value={searchValue}
             className='p-3 w-96 outline-none border  rounded-lg border-gray-400'/>
-        <button onClick={handleAddStudent} className='w-7 h-7 rounded-full bg-white'>+</button>    
+        <button onClick={handleAddStudent} className='w-7 h-7 text-white text-lg rounded-full bg-black'>+</button>    
         </form>
     )
 }
