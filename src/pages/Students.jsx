@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext"
 import NewStudent from "../components/form/NewStudent"
 import SearchInput from "../components/form/SearchInput"
 import ListStudents from "../components/list/ListStudents"
+import Footer from "../components/footer/Footer"
 
 export const Students = () =>{
 
@@ -28,7 +29,7 @@ export const Students = () =>{
         <>
 
   <Header />
-  <div className='h-[90vh] flex items-center justify-center'>
+  <div className='h-[47rem] flex items-center justify-center'>
     <div className='shadow-2xl p-5 max-w-lg w-full'>
       {formIsVisible ? (
         <NewStudent />
@@ -46,6 +47,7 @@ export const Students = () =>{
       )}
     </div>
   </div>
+  <Footer/>
 </>
 
     )

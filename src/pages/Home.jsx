@@ -1,14 +1,15 @@
 import student from '../../public/img.png';
+import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 
 const Home = () => {
     return ( 
         <>
             <Header/> 
-            <div className="flex  items-center justify-between px-8 py-16">
+            <div className="flex h-[47rem] items-center justify-between px-8 py-16">
                 
-                <div className='ml-40 w-1/3 h-2/3'>
-                    <img src={student} alt="Student" className="rounded-lg shadow-lg" />
+                <div className='ml-40 w-1/3 mt-5'>
+                    <img src={student} alt="Student" className="rounded-lg  shadow-lg" />
                 </div>
                 <div className='w-1/2 ml-16'>
                     <div className='max-w-lg'>
@@ -22,6 +23,7 @@ const Home = () => {
                     </div>
                 </div>
             </div> 
+            <Footer/>
         </>
     );
 }

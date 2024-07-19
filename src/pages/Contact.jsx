@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import Header from "../components/header/Header"
 import ContactForm from "../components/form/Contact"
 import { AppContext } from "../context/AppContext"
+import Footer from "../components/footer/Footer"
 
 export const Contact = () =>{
     const [isVisible, setIsVisible] = useState(true)
@@ -14,7 +15,7 @@ export const Contact = () =>{
     return(
         <>
         <Header/>
-        <div className='h-[90vh] w-full flex items-center justify-center'>
+        <div className='h-[47rem] w-full flex items-center justify-center'>
        {(isVisible) ? 
        <div className='shadow-2xl p-5 w-fit '>
             <ContactForm handle={handleSetIsVisible}/>
@@ -30,6 +31,7 @@ export const Contact = () =>{
          
         }
         </div>
+        <Footer/>
         </>
     )
 } 
